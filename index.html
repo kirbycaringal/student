@@ -725,20 +725,38 @@
         border-bottom: 1px solid #f0f0f0;
     }
     
+    #gradesTable tbody tr:last-child {
+        border-bottom: none;
+    }
+    
     #gradesTable tbody td {
         padding: 12px 10px;
         vertical-align: middle;
         font-size: 0.9rem;
+        border-left: none;
+        border-right: none;
+    }
+    
+    #gradesTable tbody td:first-child {
+        border-left: none;
+    }
+    
+    #gradesTable tbody td:last-child {
+        border-right: none;
     }
     
     /* Table wrapper rounded corners */
     #my-grades .table-responsive {
         border-radius: 10px;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: hidden;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         background: white;
         -webkit-overflow-scrolling: touch;
+    }
+    
+    #gradesTable {
+        margin-bottom: 0;
+        border: none;
     }
     
     /* Ensure table fits on mobile */
@@ -905,7 +923,7 @@
 
                     <!-- Grades Table -->
                     <div class="table-responsive">
-                      <table class="table table-bordered" id="gradesTable">
+                      <table class="table table-hover" id="gradesTable">
                         <thead class="bg-maroon text-white">
                           <tr>
                             <th>Subject Code</th>
